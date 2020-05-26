@@ -1,5 +1,9 @@
 class Note{
   constructor() {
-    this.message = '';
+    this.text = '';
+  }
+
+  createNote(note) {
+    this.text += note;
   }
 }
