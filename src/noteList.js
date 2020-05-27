@@ -6,4 +6,8 @@ class NoteList{
   addNote(note){
     this.list.push(note);
   }
+
+  all(){
+    return this.list;
+  }
 }

@@ -2,6 +2,9 @@
 
   let noteList = new NoteList();
   let note = new Note();
+  let note2 = new Note();
+  let message = 'Hello world'
+  let message2 = 'Hello world again'
 
   function noteListStartsWithEmptyArray(){
     if(noteList.list.length !== 0 || !Array.isArray(noteList.list)){
@@ -10,7 +13,6 @@
   };
 
   function noteListAddsNoteToArray(){
-    let message = 'Hello world'
     note.createNote(message);
 
     noteList.addNote(note);
@@ -22,6 +24,20 @@
       throw new Error('Unexpected note. Expected: ' + message + '. Got: ' + noteList.list[0].text)
     }
   }
+
+  function noteListDisplaysNotes(){
+    note2.createNote(message2);
+    noteList.addNote(note2);
+
+    if(noteList.all()[0] !== note){
+      throw new Error('Expected: ' + note)
+    }
+
+    if(noteList.all()[1] !== note2){
+      throw new Error('Expected: ' + note2)
+    }
+  }
   noteListStartsWithEmptyArray();
   noteListAddsNoteToArray();
+  noteListDisplaysNotes();
 })(this)
