@@ -1,10 +1,3 @@
-(function(exports) {
-  function changeName() {
-    var app = document.getElementById('app');
-    console.log("hello")
-    return app.innerHTML = 'howdy';
-  }
-
-  // exports.changeName = changeName;
-  changeName();
-})(this)
+document.getElementById('app');
+let myDiv = document.getElementById('app');
+myDiv.innerHTML = 'howdy';
