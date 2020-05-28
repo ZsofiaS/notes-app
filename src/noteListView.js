@@ -7,12 +7,9 @@ class NoteListView {
     let string = '<ul>';
 
     this.view.all().forEach((item, i) => {
-      string += '<li><div>' + item.text + '</div></li>';
-      console.log('Item.text: ' + item.text);
-      console.log('Inside view: ' + string);
+      string += '<li><div>' + item.text.substring(0, 20) + '</div></li>';
     });
 
-    console.log('Final string: ' + string + '</ul>');
     return string + '</ul>';
   }
 }

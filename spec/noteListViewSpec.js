@@ -3,7 +3,7 @@
   let note = new Note();
   let noteList = new NoteList();
   let noteListView = new NoteListView(noteList);
-  let text = "Favourite food: pesto";
+  let text = "Favourite food: pesto, pizza, pancake";
 
   note.createNote(text);
   noteList.addNote(note);
@@ -14,10 +14,11 @@
     }
   }
 
-  function testNoteDisplayed() {
-    assert.isTrue(noteListView.display() ===  '<ul><li><div>' + text + '</div></li></ul>');
+  function testNoteDisplayedIs20Chars() {
+    let shortText = text.substring(0, 20);
+    assert.isTrue(noteListView.display() ===  '<ul><li><div>' + shortText + '</div></li></ul>');
   }
 
-  testNoteDisplayed();
+  testNoteDisplayedIs20Chars();
   testNoteListViewIsNotEmpty();
 })()
