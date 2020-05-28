@@ -2,12 +2,17 @@ class NoteListView {
   constructor(noteList) {
     this.view = noteList;
   }
+
   display() {
-    let string = "";
+    let string = '<ul>';
 
     this.view.all().forEach((item, i) => {
-      string += '<ul><li><div>' + item.text + '</div></li></ul>'
+      string += '<li><div>' + item.text + '</div></li>';
+      console.log('Item.text: ' + item.text);
+      console.log('Inside view: ' + string);
     });
-    return string;
+
+    console.log('Final string: ' + string + '</ul>');
+    return string + '</ul>';
   }
 }
