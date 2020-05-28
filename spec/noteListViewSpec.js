@@ -15,9 +15,7 @@
   }
 
   function testNoteDisplayed() {
-    if(noteListView.display() !==  '<ul><li><div>' + text + '</div></li></ul>') {
-      throw new Error('Should display unordered list')
-    }
+    assert.isTrue(noteListView.display() ===  '<ul><li><div>' + text + '</div></li></ul>');
   }
 
   testNoteDisplayed();
