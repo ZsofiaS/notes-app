@@ -10,5 +10,10 @@
     assert.isTrue(singleNoteView.note === note);
   }
 
+  function testSingleNoteViewChangesInnerHTML() {
+    assert.isTrue(singleNoteView.display() === '<div>' + text + '</div>')
+  }
+
   testInstantiatesWithNote();
+  testSingleNoteViewChangesInnerHTML();
 })()
