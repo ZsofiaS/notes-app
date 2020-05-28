@@ -5,6 +5,7 @@ class NoteList{
 
   addNote(note){
     this.list.push(note);
+    note.id = this.list.indexOf(note);
   }
 
   all(){
