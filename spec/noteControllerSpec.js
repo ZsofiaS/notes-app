@@ -6,7 +6,7 @@
     }
 
     display(){
-      return '<ul><li><div>' + this.view + '</ul></li></div>'
+      return '<ul><li><div>' + this.view + '</div></li></ul>'
     }
   }
 
@@ -18,5 +18,13 @@
     assert.isTrue(noteController.noteListView === noteListViewDouble);
   }
 
+  function testNoteControllerChangesInnerHTML() {
+    noteController.insertHTML();
+
+    let element = document.getElementById('app');
+    assert.isTrue(element.innerHTML === '<ul><li><div>we are here to have fun</div></li></ul>')
+  }
+
   testNoteControllerCanBeInstantiated();
+  testNoteControllerChangesInnerHTML();
 })()
