@@ -25,6 +25,11 @@
     assert.isTrue(element.innerHTML === '<ul><li><div>we are here to have fun</div></li></ul>')
   }
 
+  function testNoteControllerShowsSingleNote(){
+
+  }
+
   testNoteControllerCanBeInstantiated();
   testNoteControllerChangesInnerHTML();
+  testNoteControllerShowsSingleNote();
 })()

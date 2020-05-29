@@ -13,13 +13,17 @@
     <div id='app'>
       hello
     </div>
+
+    <div id='single-note'>
+      
+    </div>
     <script src='src/noteController.js'></script>
     <script type="text/javascript">
       let noteList = new NoteList();
       let note = new Note();
       let note2 = new Note();
       let message = 'Hello world';
-      let message2 = 'Hello world again';
+      let message2 = 'Hello world again 1234567891011121314151617181920';
       let noteListView = new NoteListView(noteList);
 
       note.createNote(message);
@@ -29,6 +33,7 @@
 
       let noteController = new NoteController(noteListView);
       noteController.insertHTML();
+      noteController.showSingleNote();
     </script>
   </body>
 </html>
