@@ -14,9 +14,13 @@
       hello
     </div>
 
-    <div id='single-note'>
+    <div id='single-note'></div>
 
-    </div>
+    <form id="text" class="" action="#notes/new" method="post">
+      <textarea name="name" rows="8" cols="80"></textarea>
+      <input type="submit" name="" value="Submit">
+    </form>
+
     <script src='src/noteController.js'></script>
     <script type="text/javascript">
       let noteList = new NoteList();
