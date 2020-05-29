@@ -14,5 +14,21 @@
       hello
     </div>
     <script src='src/noteController.js'></script>
+    <script type="text/javascript">
+      let noteList = new NoteList();
+      let note = new Note();
+      let note2 = new Note();
+      let message = 'Hello world';
+      let message2 = 'Hello world again';
+      let noteListView = new NoteListView(noteList);
+
+      note.createNote(message);
+      note2.createNote(message2);
+      noteList.addNote(note);
+      noteList.addNote(note2);
+
+      let noteController = new NoteController(noteListView);
+      noteController.insertHTML();
+    </script>
   </body>
 </html>
