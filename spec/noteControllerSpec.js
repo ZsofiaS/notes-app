@@ -6,10 +6,11 @@
     }
 
     display(){
-      return '<ul><li><div>' + this.view + '</div></li></ul>'
+      return '<ul><li><a id="0" href="#notes/0"><div>' + this.view + '</div></a></li></ul>'
     }
   }
 
+  let previousURL = window.location.href
   let noteListViewDouble = new NoteListViewDouble('we are here to have fun');
   let noteController = new NoteController(noteListViewDouble);
   console.log(noteController)
@@ -22,11 +23,13 @@
     noteController.insertHTML();
 
     let element = document.getElementById('app');
-    assert.isTrue(element.innerHTML === '<ul><li><div>we are here to have fun</div></li></ul>')
+    assert.isTrue(element.innerHTML === '<ul><li><a id="0" href="#notes/0"><div>we are here to have fun</div></a></li></ul>')
   }
 
   function testNoteControllerShowsSingleNote(){
-
+    // noteController.noteListView.display();
+    document.getElementById('0').click();
+    assert.isTrue(previousURL !== window.location.href)
   }
 
   testNoteControllerCanBeInstantiated();

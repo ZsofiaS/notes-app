@@ -16,7 +16,7 @@
 
   function testNoteDisplayedIs20Chars() {
     let shortText = text.substring(0, 20);
-    assert.isTrue(noteListView.display() ===  '<ul><li><a href="#notes/' + noteList.list[0].id + '"><div>' + shortText + '</div></a></li></ul>');
+    assert.isTrue(noteListView.display() ===  '<ul><li><a id="' + noteList.list[0].id + '" href="#notes/' + noteList.list[0].id + '"><div>' + shortText + '</div></a></li></ul>');
   }
 
   testNoteDisplayedIs20Chars();
