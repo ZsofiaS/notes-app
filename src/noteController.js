@@ -25,4 +25,20 @@ class NoteController {
     }, false);
   }
 
+
+
+  submitNote() {
+
+    //let list = this.noteListView.view.list;
+    let submitForm = document.getElementById("text");
+    submitForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      let text = event.path[0][0].value;
+      let note = new Note();
+      note.createNote(text);
+
+      //console.log(list)
+      return note;
+    })
+  }
 }

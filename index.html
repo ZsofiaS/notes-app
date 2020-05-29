@@ -24,20 +24,27 @@
     <script src='src/noteController.js'></script>
     <script type="text/javascript">
       let noteList = new NoteList();
-      let note = new Note();
-      let note2 = new Note();
-      let message = 'Hello world';
-      let message2 = 'Hello world again 1234567891011121314151617181920';
       let noteListView = new NoteListView(noteList);
-
-      note.createNote(message);
-      note2.createNote(message2);
-      noteList.addNote(note);
-      noteList.addNote(note2);
-
       let noteController = new NoteController(noteListView);
+      let note = noteController.submitNote();
+      console.log(note);
+      noteList.addNote(note);
+
+
+      // let note = new Note();
+      // let note2 = new Note();
+      // let message = 'Hello world';
+      // let message2 = 'Hello world again 1234567891011121314151617181920';
+
+
+      // note.createNote(message);
+      // note2.createNote(message2);
+      // noteList.addNote(note);
+      // noteList.addNote(note2);
+
       noteController.insertHTML();
       noteController.showSingleNote();
+
     </script>
   </body>
 </html>
