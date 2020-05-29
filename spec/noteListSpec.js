@@ -37,7 +37,13 @@
       throw new Error('Expected: ' + note2)
     }
   }
+
+  function noteGetsUniqueIdWhenAddedToList() {
+    assert.isTrue(note2.id === noteList.list.indexOf(note2))
+  }
+
   noteListStartsWithEmptyArray();
   noteListAddsNoteToArray();
   noteListDisplaysNotes();
+  noteGetsUniqueIdWhenAddedToList();
 })(this)

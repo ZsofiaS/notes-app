@@ -2,9 +2,8 @@
   let note = new Note();
 
   function testNoteDefaultState() {
-    if (note.text !== '') {
-      throw new Error('Note should be an empty string by default');
-    }
+    assert.isTrue(note.text === '');
+    assert.isTrue(note.id === 0);
   }
 
   function testCreateNote() {
