@@ -10,13 +10,8 @@ class NoteController {
 
   showSingleNote(){
     let self = this;
-    console.log("outside: " + window.location.href);
     window.addEventListener('hashchange', function() {
-      console.log("inside: " + window.location.href);
       let id = window.location.hash.split('#notes/')[1]
-      console.log(id)
-
-      console.log(self.noteListView.view.list)
 
       let note = self.noteListView.view.list[id]
       let singleNoteView = new SingleNoteView(note);
@@ -29,7 +24,8 @@ class NoteController {
 
   submitNote() {
 
-    //let list = this.noteListView.view.list;
+    let list = this.noteListView.view.list;
+    console.log(list.)
     let submitForm = document.getElementById("text");
     submitForm.addEventListener('submit', function(event) {
       event.preventDefault();

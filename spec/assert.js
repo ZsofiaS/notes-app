@@ -1,4 +1,4 @@
-(function (exports) {
+(function(exports) {
   let assert = {
     isTrue: function (assertion) {
       if (!assertion) {
